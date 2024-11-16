@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685944572354",
+    "project_id": "buffmeupv2",
+    "storage_bucket": "buffmeupv2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685944572354:android:c4456517fc3eebb8406e5b",
+        "android_client_info": {
+          "package_name": "com.example.buffmeup_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD9TLL-5uvL3sJ-bRIxQRJ7WBYZ_dkM70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
