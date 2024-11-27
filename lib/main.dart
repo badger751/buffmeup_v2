@@ -1,13 +1,25 @@
 
-import 'package:buffmeup_v2/views/screens/login.dart';
-
+import 'package:buffmeup_v2/views/screens/login_page.dart';
+import 'package:buffmeup_v2/views/screens/update_user.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 
 
 
+Future<void> main() async {
+  await Supabase.initialize(
+    url: 'https://dmaabmqoohfeihtfwfeq.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtYWFibXFvb2hmZWlodGZ3ZmVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE3MjUzOTYsImV4cCI6MjA0NzMwMTM5Nn0.xRJHr6hBPMBugqr851j_1riPxMf6zntkfIHt3iwu4hc',
+  );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
 
-void main(){
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -38,7 +50,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage()
+      home: const UpdateUserScreen()
     );
   }
 }
@@ -127,6 +139,18 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+extension ContextExtension on BuildContext {
+  void showSnackBar(String message, {bool isError = false}) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: isError
+            ? Theme.of(this).colorScheme.error
+            : Theme.of(this).snackBarTheme.backgroundColor,
+      ),
     );
   }
 }

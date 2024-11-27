@@ -39,6 +39,9 @@ dependencies:
   auto_route: ^9.2.2
   firebase_auth: ^5.3.3
   google_fonts: ^6.2.1
+  supabase_flutter: ^2.8.0
+  video_player: ^2.9.2
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
