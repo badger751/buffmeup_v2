@@ -1,5 +1,4 @@
 
-import 'package:buffmeup_v2/views/screens/login_page.dart';
 import 'package:buffmeup_v2/views/screens/update_user.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:buffmeup_v2/main.dart';
-import 'package:buffmeup_v2/views/screens/fetch_user.dart';
 import 'package:buffmeup_v2/views/screens/update_user.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
